@@ -3,954 +3,621 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SUNG I is a trusted plastic injection molding partner delivering OEM and ODM manufacturing solutions for global industries.">
+  <meta name="description" content="SUNG I — 45+ years of precision plastic injection molding. OEM/ODM partner for global industries. Request a quote today.">
   <title>SUNG I | Precision Plastic Injection Molding</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: "#0F1B2D",
-            "primary-light": "#1B2838",
-            accent: "#C8A84E",
-            "accent-hover": "#D4B85E",
-            surface: "#F8FAFC",
-            ink: "#1E293B",
-            muted: "#64748B",
-            "muted-dark": "#94A3B8",
-            border: "#E2E8F0"
+            primary: '#0F1B2D',
+            'primary-light': '#1B2838',
+            accent: '#C8A84E',
+            'accent-hover': '#D4B85E',
+            'bg-alt': '#F8FAFC',
+            foreground: '#1E293B',
+            muted: '#64748B',
           },
           fontFamily: {
-            heading: ["Lexend", "Noto Sans TC", "Noto Sans JP", "system-ui", "sans-serif"],
-            body: ["Source Sans 3", "Noto Sans TC", "Noto Sans JP", "system-ui", "sans-serif"]
+            heading: ['Lexend', 'Noto Sans TC', 'Noto Sans JP', 'sans-serif'],
+            body: ['Source Sans 3', 'Noto Sans TC', 'Noto Sans JP', 'sans-serif'],
           },
-          boxShadow: {
-            halo: "0 30px 80px rgba(15, 27, 45, 0.28)",
-            panel: "0 20px 50px rgba(15, 27, 45, 0.08)"
-          },
-          backgroundImage: {
-            "mesh-dark": "radial-gradient(circle at 20% 20%, rgba(200,168,78,0.18), transparent 28%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.09), transparent 22%), linear-gradient(135deg, #0F1B2D 0%, #15263B 55%, #0B1727 100%)",
-            "gold-band": "linear-gradient(135deg, #B79232 0%, #C8A84E 45%, #D4B85E 100%)",
-            "case-panel": "linear-gradient(160deg, rgba(15,27,45,0.95) 0%, rgba(27,40,56,0.85) 100%)"
-          }
-        }
-      }
+        },
+      },
     };
   </script>
   <style>
     :root {
-      color-scheme: light;
+      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+      --duration-instant: 150ms;
+      --duration-state: 250ms;
+      --duration-entrance: 600ms;
     }
-
-    body {
-      font-family: "Source Sans 3", "Noto Sans TC", "Noto Sans JP", system-ui, sans-serif;
-      color: #1E293B;
-      background: #FFFFFF;
-      text-rendering: optimizeLegibility;
-    }
-
-    h1, h2, h3, h4, .font-heading {
-      font-family: "Lexend", "Noto Sans TC", "Noto Sans JP", system-ui, sans-serif;
-    }
-
-    .skip-link {
-      position: absolute;
-      left: 1rem;
-      top: -3rem;
-      z-index: 100;
-      border-radius: 9999px;
-      background: #C8A84E;
-      color: #0F1B2D;
-      padding: 0.75rem 1rem;
-      font-weight: 700;
-      transition: top 0.2s ease;
-    }
-
-    .skip-link:focus {
-      top: 1rem;
-    }
-
-    .focus-ring {
-      outline: none;
-    }
-
-    .focus-ring:focus-visible {
-      box-shadow: 0 0 0 2px #0F1B2D, 0 0 0 4px rgba(200, 168, 78, 0.95);
-    }
-
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -0.4rem;
-      width: 100%;
-      height: 2px;
-      transform: scaleX(0);
-      transform-origin: left;
-      background: #C8A84E;
-      transition: transform 0.2s ease;
-    }
-
-    .nav-link:hover::after,
-    .nav-link:focus-visible::after,
-    .nav-link.active::after {
-      transform: scaleX(1);
-    }
-
-    .hero-grid {
-      background-image:
-        linear-gradient(rgba(200, 168, 78, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200, 168, 78, 0.08) 1px, transparent 1px);
-      background-size: 44px 44px;
-    }
-
-    .placeholder-pattern {
-      background-image:
-        radial-gradient(circle at 18% 18%, rgba(212, 184, 94, 0.28), transparent 18%),
-        radial-gradient(circle at 78% 28%, rgba(255, 255, 255, 0.16), transparent 18%),
-        linear-gradient(145deg, rgba(27, 40, 56, 0.98), rgba(15, 27, 45, 0.88));
-    }
-
-    section[id],
-    footer[id],
-    div[id] {
-      scroll-margin-top: 6rem;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-      transition-delay: var(--reveal-delay, 0ms);
-    }
-
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .industry-card:hover .industry-overlay,
-    .industry-card:focus-within .industry-overlay {
-      background: linear-gradient(to top, rgba(15, 27, 45, 0.56), rgba(15, 27, 45, 0.3));
-    }
-
-    .industry-card:hover .industry-extra,
-    .industry-card:focus-within .industry-extra {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .timeline-step.is-active .timeline-node {
-      box-shadow: 0 0 0 8px rgba(200, 168, 78, 0.15);
-      transform: scale(1.04);
-    }
-
-    .timeline-step.is-active .timeline-line::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
-    .timeline-step.is-active .timeline-line-mobile::after {
-      transform: scaleY(1);
-      transform-origin: top;
-    }
-
-    .timeline-line::after,
-    .timeline-line-mobile::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, #C8A84E, rgba(200, 168, 78, 0.18));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.7s ease;
-    }
-
-    .timeline-line-mobile::after {
-      background: linear-gradient(180deg, #C8A84E, rgba(200, 168, 78, 0.18));
-      transform: scaleY(0);
-      transform-origin: top;
-    }
-
+    html { font-family: 'Source Sans 3', 'Noto Sans TC', 'Noto Sans JP', sans-serif; }
+    .font-heading { font-family: 'Lexend', 'Noto Sans TC', 'Noto Sans JP', sans-serif; }
+    /* Skip link */
+    .skip-link { position: absolute; top: -100%; left: 1rem; z-index: 100; padding: 0.75rem 1.5rem; background: #C8A84E; color: #0F1B2D; font-weight: 600; border-radius: 0 0 0.5rem 0.5rem; transition: top 0.2s; }
+    .skip-link:focus { top: 0; }
+    /* Focus visible */
+    *:focus-visible { outline: 2px solid #C8A84E; outline-offset: 2px; border-radius: 2px; }
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity var(--duration-entrance) var(--ease-out-quart), transform var(--duration-entrance) var(--ease-out-quart); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    /* Card hover */
+    .cap-card { transition: transform var(--duration-state) var(--ease-out-quart), box-shadow var(--duration-state) var(--ease-out-quart), border-color var(--duration-state); border-top: 3px solid transparent; }
+    .cap-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(15,27,45,0.1); border-top-color: #C8A84E; }
+    /* Industry card overlay */
+    .ind-card .ind-overlay { background: linear-gradient(180deg, rgba(15,27,45,0.3) 0%, rgba(15,27,45,0.75) 100%); transition: opacity 300ms var(--ease-out-quart); }
+    .ind-card:hover .ind-overlay { opacity: 0.5; }
+    .ind-card .ind-explore { opacity: 0; transform: translateY(8px); transition: all 300ms var(--ease-out-quart); }
+    .ind-card:hover .ind-explore { opacity: 1; transform: translateY(0); }
+    /* Timeline */
+    .tl-step { opacity: 0.35; transition: opacity 400ms var(--ease-out-quart); }
+    .tl-step.active { opacity: 1; }
+    /* Nav link */
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #C8A84E; transition: width 200ms var(--ease-out-quart); }
+    .nav-link.active::after, .nav-link:hover::after { width: 100%; }
+    /* Hamburger */
+    .hamburger span { display: block; width: 24px; height: 2px; background: #fff; transition: transform 300ms var(--ease-out-quart), opacity 200ms; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    /* Mobile menu */
+    .mobile-menu { transform: translateX(100%); transition: transform 400ms var(--ease-out-quart); }
+    .mobile-menu.open { transform: translateX(0); }
+    /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation: none !important;
-        transition: none !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .cap-card, .ind-card .ind-overlay, .ind-card .ind-explore, .tl-step, .nav-link::after, .hamburger span, .mobile-menu { transition: none !important; }
+      .tl-step { opacity: 1; }
     }
+    /* Button base */
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; font-weight: 600; border-radius: 0.5rem; transition: background var(--duration-instant), transform var(--duration-instant); }
+    .btn:hover { transform: scale(1.02); }
+    .btn:active { transform: scale(0.98); }
   </style>
 </head>
-<body class="bg-white text-ink antialiased">
-  <a href="#main-content" class="skip-link focus-ring">Skip to content</a>
+<body class="bg-white text-foreground antialiased">
 
-  <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-primary/95 backdrop-blur">
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:h-[72px] md:px-8">
-      <a href="#home" class="focus-ring inline-flex min-h-11 items-center gap-3 rounded-full px-1 text-white" aria-label="SUNG I Home">
-        <img src="assets/logo.jpg" alt="SUNG I" class="h-10 w-auto rounded md:h-12" />
-      </a>
+<!-- Skip Link -->
+<a href="#main" class="skip-link">Skip to main content</a>
 
-      <nav class="hidden items-center gap-6 lg:flex" aria-label="Primary">
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#home">Home</a>
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#capabilities">Capabilities</a>
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#industries">Industries</a>
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#why-sung-i">Why Sung I</a>
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#workflow">Workflow</a>
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#cases">Cases</a>
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#quality">Quality</a>
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#about">About</a>
-        <a class="nav-link focus-ring relative min-h-11 rounded-md px-1 py-2 text-sm font-semibold text-white/90 transition hover:text-white" href="#contact">Contact</a>
-      </nav>
-
-      <div class="hidden items-center gap-3 lg:flex">
-        <div class="flex items-center rounded-full border border-white/10 bg-white/5 p-1">
-          <button class="focus-ring min-h-11 rounded-full bg-white px-3 text-sm font-semibold text-primary" type="button">EN</button>
-          <button class="focus-ring min-h-11 rounded-full px-3 text-sm font-semibold text-white/75 transition hover:text-white" type="button">繁中</button>
-          <button class="focus-ring min-h-11 rounded-full px-3 text-sm font-semibold text-white/75 transition hover:text-white" type="button">JP</button>
-        </div>
-        <a href="#rfq" class="focus-ring inline-flex min-h-11 items-center rounded-full bg-accent px-5 text-sm font-semibold text-primary shadow-lg transition duration-200 hover:scale-[1.02] hover:bg-accent-hover">Request a Quote</a>
+<!-- ========== 1. HEADER / NAV ========== -->
+<header class="sticky top-0 z-50 bg-primary h-16 lg:h-[72px] flex items-center" id="site-header">
+  <div class="w-full max-w-[1280px] mx-auto px-6 lg:px-8 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex-shrink-0">
+      <img src="assets/logo.jpg" alt="SUNG I Logo" class="h-8 lg:h-10 w-auto">
+    </a>
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-white/80" aria-label="Main navigation">
+      <a href="#hero" class="nav-link py-2">Home</a>
+      <a href="#capabilities" class="nav-link py-2">Services</a>
+      <a href="#industries" class="nav-link py-2">Industries</a>
+      <a href="#why" class="nav-link py-2">Why Us</a>
+      <a href="#workflow" class="nav-link py-2">Process</a>
+      <a href="#cases" class="nav-link py-2">Cases</a>
+      <a href="#rfq" class="nav-link py-2">Contact</a>
+    </nav>
+    <!-- Right: Lang + CTA -->
+    <div class="hidden lg:flex items-center gap-4">
+      <div class="flex items-center gap-1 text-xs text-white/60">
+        <button class="px-2 py-1 rounded text-white font-semibold bg-white/10 min-w-[32px] min-h-[32px]">EN</button>
+        <button class="px-2 py-1 rounded hover:text-white min-w-[32px] min-h-[32px]">中</button>
+        <button class="px-2 py-1 rounded hover:text-white min-w-[32px] min-h-[32px]">JP</button>
       </div>
-
-      <button id="menu-toggle" class="focus-ring inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-        </svg>
-      </button>
+      <a href="#rfq" class="btn bg-accent text-primary px-5 py-2 text-sm font-bold rounded-lg hover:bg-accent-hover">Request a Quote</a>
     </div>
+    <!-- Hamburger -->
+    <button class="hamburger lg:hidden flex flex-col gap-[5px] p-3 min-w-[44px] min-h-[44px] items-center justify-center" aria-label="Toggle menu" aria-expanded="false" id="hamburger-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-    <div id="mobile-menu" class="hidden border-t border-white/10 bg-primary lg:hidden">
-      <nav class="mx-auto flex max-w-7xl flex-col px-6 py-4" aria-label="Mobile">
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#home">Home</a>
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#capabilities">Capabilities</a>
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#industries">Industries</a>
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#why-sung-i">Why Sung I</a>
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#workflow">Workflow</a>
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#cases">Cases</a>
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#quality">Quality</a>
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#about">About</a>
-        <a class="focus-ring min-h-11 rounded-xl px-4 py-3 text-base font-semibold text-white/90 hover:bg-white/5 hover:text-white" href="#contact">Contact</a>
-        <div class="mt-4 flex items-center justify-between gap-3 border-t border-white/10 pt-4">
-          <div class="flex items-center rounded-full border border-white/10 bg-white/5 p-1">
-            <button class="focus-ring min-h-11 rounded-full bg-white px-3 text-sm font-semibold text-primary" type="button">EN</button>
-            <button class="focus-ring min-h-11 rounded-full px-3 text-sm font-semibold text-white/75 transition hover:text-white" type="button">繁中</button>
-            <button class="focus-ring min-h-11 rounded-full px-3 text-sm font-semibold text-white/75 transition hover:text-white" type="button">JP</button>
-          </div>
-          <a href="#rfq" class="focus-ring inline-flex min-h-11 items-center rounded-full bg-accent px-4 text-sm font-semibold text-primary transition hover:bg-accent-hover">Request a Quote</a>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu fixed inset-0 z-40 bg-primary flex flex-col items-center justify-center gap-8 lg:hidden" id="mobile-menu" aria-hidden="true">
+  <nav class="flex flex-col items-center gap-6 text-lg font-heading font-semibold text-white">
+    <a href="#hero" class="mobile-nav-link py-2 min-h-[44px]">Home</a>
+    <a href="#capabilities" class="mobile-nav-link py-2 min-h-[44px]">Services</a>
+    <a href="#industries" class="mobile-nav-link py-2 min-h-[44px]">Industries</a>
+    <a href="#why" class="mobile-nav-link py-2 min-h-[44px]">Why Us</a>
+    <a href="#workflow" class="mobile-nav-link py-2 min-h-[44px]">Process</a>
+    <a href="#cases" class="mobile-nav-link py-2 min-h-[44px]">Cases</a>
+    <a href="#rfq" class="mobile-nav-link py-2 min-h-[44px]">Contact</a>
+  </nav>
+  <a href="#rfq" class="btn bg-accent text-primary px-8 py-3 text-base font-bold rounded-lg">Request a Quote</a>
+  <div class="flex gap-2 text-sm text-white/60 mt-4">
+    <button class="px-3 py-2 rounded text-white font-semibold bg-white/10">EN</button>
+    <button class="px-3 py-2 rounded hover:text-white">中</button>
+    <button class="px-3 py-2 rounded hover:text-white">JP</button>
+  </div>
+</div>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main id="main">
+
+<!-- ========== 2. HERO ========== -->
+<section id="hero" class="bg-primary min-h-[calc(100vh-64px)] lg:min-h-[calc(100vh-72px)] flex items-center">
+  <div class="w-full max-w-[1280px] mx-auto px-6 lg:px-8 py-12 lg:py-0">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <!-- Left -->
+      <div class="lg:w-[55%] text-center lg:text-left">
+        <p class="text-accent uppercase tracking-[0.2em] text-sm font-semibold mb-4">Since 1978 · Precision Plastics</p>
+        <h1 class="font-heading font-bold text-white leading-[1.1] mb-6" style="font-size:clamp(2.25rem,5vw,3.5rem);">Your Trusted Partner in Plastic Injection Molding</h1>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">45+ years of precision engineering for global industries — from mold design to mass production, all under one roof.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+          <a href="#rfq" class="btn bg-accent text-primary px-8 py-4 text-base font-bold rounded-lg hover:bg-accent-hover">Request a Quote</a>
+          <a href="#capabilities" class="btn border-2 border-white/30 text-white px-8 py-4 text-base font-semibold rounded-lg hover:border-white/60">Our Capabilities</a>
         </div>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main-content">
-    <section id="home" class="hero-grid relative overflow-hidden bg-mesh-dark text-white">
-      <div class="absolute inset-0">
-        <div class="absolute left-[-6rem] top-10 h-48 w-48 rounded-full bg-accent/10 blur-3xl"></div>
-        <div class="absolute right-[-5rem] top-24 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
-        <div class="absolute bottom-[-4rem] left-1/3 h-56 w-56 rounded-full bg-accent/10 blur-3xl"></div>
+        <div class="flex flex-wrap gap-6 justify-center lg:justify-start text-sm text-slate-400">
+          <span class="flex items-center gap-2"><svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2L10 14l-4.8 2.5.9-5.2L2.3 7.6l5.3-.8z" fill="#C8A84E"/></svg> ISO 9001</span>
+          <span>500+ Global Clients</span>
+          <span>OEM / ODM</span>
+        </div>
       </div>
-      <div class="relative mx-auto grid min-h-[calc(100vh-72px)] max-w-7xl items-center gap-10 px-6 py-16 md:px-8 lg:grid-cols-2 lg:py-20">
+      <!-- Right -->
+      <div class="lg:w-[45%] relative">
+        <div class="aspect-[4/3] bg-primary-light rounded-2xl border border-slate-700 flex items-center justify-center overflow-hidden relative">
+          <svg class="w-24 h-24 text-slate-600" fill="none" viewBox="0 0 96 96"><rect x="16" y="24" width="64" height="48" rx="4" stroke="currentColor" stroke-width="2"/><path d="M38 48l8-8 12 12 8-6 14 14H16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="34" cy="38" r="4" stroke="currentColor" stroke-width="2"/></svg>
+          <p class="absolute bottom-4 left-4 right-4 text-center text-slate-500 text-sm">Factory & Production Facility</p>
+        </div>
+        <div class="absolute -top-3 -right-3 bg-accent text-primary text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">45+ Years of Excellence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 3. TRUST STRIP ========== -->
+<section id="trust" class="bg-accent py-8 lg:py-10" aria-label="Company statistics">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div class="reveal"><p class="font-heading font-bold text-primary text-2xl lg:text-4xl count-up" data-target="45">0</p><p class="text-primary/70 font-medium text-sm mt-1">Years of Excellence</p></div>
+      <div class="reveal" style="transition-delay:80ms"><p class="font-heading font-bold text-primary text-2xl lg:text-4xl count-up" data-target="500">0</p><p class="text-primary/70 font-medium text-sm mt-1">Global Clients</p></div>
+      <div class="reveal" style="transition-delay:160ms"><p class="font-heading font-bold text-primary text-2xl lg:text-4xl count-up" data-target="1000">0</p><p class="text-primary/70 font-medium text-sm mt-1">Molds Delivered</p></div>
+      <div class="reveal" style="transition-delay:240ms"><p class="font-heading font-bold text-primary text-2xl lg:text-4xl count-up" data-target="99.8" data-suffix="%" data-decimal="1">0</p><p class="text-primary/70 font-medium text-sm mt-1">Client Satisfaction</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 4. CORE CAPABILITIES ========== -->
+<section id="capabilities" class="bg-white py-12 lg:py-20">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-heading font-bold text-foreground mb-3" style="font-size:clamp(1.75rem,3.5vw,2.5rem);">Core Capabilities</h2>
+      <p class="text-muted max-w-2xl mx-auto">Seven specialized processes for your exact requirements</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <article class="cap-card bg-white rounded-xl p-6 border border-slate-100 reveal">
+        <div class="mb-4"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="14" width="32" height="20" rx="3" stroke="#C8A84E" stroke-width="2"/><path d="M18 20v8M24 18v12M30 22v6" stroke="#C8A84E" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3 class="font-heading font-semibold text-foreground mb-2" style="font-size:clamp(1.125rem,2vw,1.25rem);">Precision Injection Molding</h3>
+        <p class="text-muted text-sm leading-relaxed mb-4">High-precision thermoplastic injection with tight tolerances for demanding industrial applications.</p>
+        <a href="#rfq" class="text-accent text-sm font-semibold hover:underline">Learn More →</a>
+      </article>
+      <!-- Card 2 -->
+      <article class="cap-card bg-white rounded-xl p-6 border border-slate-100 reveal" style="transition-delay:80ms">
+        <div class="mb-4"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M14 34V14h20v20H14z" stroke="#C8A84E" stroke-width="2"/><path d="M20 14V8M28 14V8M14 22h20M14 28h12" stroke="#C8A84E" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3 class="font-heading font-semibold text-foreground mb-2" style="font-size:clamp(1.125rem,2vw,1.25rem);">Mold Design &amp; Tooling</h3>
+        <p class="text-muted text-sm leading-relaxed mb-4">In-house mold design, CNC machining, and EDM processing for complex geometries.</p>
+        <a href="#rfq" class="text-accent text-sm font-semibold hover:underline">Learn More →</a>
+      </article>
+      <!-- Card 3 -->
+      <article class="cap-card bg-white rounded-xl p-6 border border-slate-100 reveal" style="transition-delay:160ms">
+        <div class="mb-4"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="10" y="10" width="28" height="28" rx="4" stroke="#C8A84E" stroke-width="2"/><path d="M16 24h16M24 16v16" stroke="#C8A84E" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <h3 class="font-heading font-semibold text-foreground mb-2" style="font-size:clamp(1.125rem,2vw,1.25rem);">Insert Molding</h3>
+        <p class="text-muted text-sm leading-relaxed mb-4">Metal inserts embedded during molding for superior mechanical strength and reduced assembly.</p>
+        <a href="#rfq" class="text-accent text-sm font-semibold hover:underline">Learn More →</a>
+      </article>
+      <!-- Card 4 -->
+      <article class="cap-card bg-white rounded-xl p-6 border border-slate-100 reveal" style="transition-delay:240ms">
+        <div class="mb-4"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="14" stroke="#C8A84E" stroke-width="2"/><circle cx="24" cy="24" r="6" stroke="#C8A84E" stroke-width="2"/></svg></div>
+        <h3 class="font-heading font-semibold text-foreground mb-2" style="font-size:clamp(1.125rem,2vw,1.25rem);">Two-Shot (2K) Molding</h3>
+        <p class="text-muted text-sm leading-relaxed mb-4">Multi-material injection in a single cycle — ideal for soft-touch grips and aesthetic two-tone parts.</p>
+        <a href="#rfq" class="text-accent text-sm font-semibold hover:underline">Learn More →</a>
+      </article>
+      <!-- Card 5 -->
+      <article class="cap-card bg-white rounded-xl p-6 border border-slate-100 reveal" style="transition-delay:320ms">
+        <div class="mb-4"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M12 36c4-4 8-16 12-16s8 12 12 16" stroke="#C8A84E" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="14" r="4" stroke="#C8A84E" stroke-width="2"/></svg></div>
+        <h3 class="font-heading font-semibold text-foreground mb-2" style="font-size:clamp(1.125rem,2vw,1.25rem);">Overmolding</h3>
+        <p class="text-muted text-sm leading-relaxed mb-4">Plastic-over-plastic or plastic-over-metal bonding for enhanced ergonomics and waterproofing.</p>
+        <a href="#rfq" class="text-accent text-sm font-semibold hover:underline">Learn More →</a>
+      </article>
+      <!-- Card 6 -->
+      <article class="cap-card bg-white rounded-xl p-6 border border-slate-100 reveal" style="transition-delay:400ms">
+        <div class="mb-4"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="4" stroke="#C8A84E" stroke-width="2"/><path d="M16 16h16v6H16zM16 26h10v6H16z" stroke="#C8A84E" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h3 class="font-heading font-semibold text-foreground mb-2" style="font-size:clamp(1.125rem,2vw,1.25rem);">Assembly &amp; Sub-Assembly</h3>
+        <p class="text-muted text-sm leading-relaxed mb-4">Ultrasonic welding, screwing, pad printing, and packaging — ship-ready finished products.</p>
+        <a href="#rfq" class="text-accent text-sm font-semibold hover:underline">Learn More →</a>
+      </article>
+      <!-- Card 7 -->
+      <article class="cap-card bg-white rounded-xl p-6 border border-slate-100 reveal" style="transition-delay:480ms">
+        <div class="mb-4"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 8l14 8v16l-14 8-14-8V16z" stroke="#C8A84E" stroke-width="2" stroke-linejoin="round"/><path d="M24 24V8M24 24l14-8M24 24L10 16" stroke="#C8A84E" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h3 class="font-heading font-semibold text-foreground mb-2" style="font-size:clamp(1.125rem,2vw,1.25rem);">Material Selection Support</h3>
+        <p class="text-muted text-sm leading-relaxed mb-4">Expert guidance on ABS, PC, PP, PA, POM, TPE/TPU, and engineering plastics for your application.</p>
+        <a href="#rfq" class="text-accent text-sm font-semibold hover:underline">Learn More →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 5. INDUSTRIES ========== -->
+<section id="industries" class="bg-bg-alt py-12 lg:py-20">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-heading font-bold text-foreground mb-3" style="font-size:clamp(1.75rem,3.5vw,2.5rem);">Industries We Serve</h2>
+      <p class="text-muted max-w-2xl mx-auto">Precision components for five key sectors worldwide</p>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6">
+      <div class="ind-card relative rounded-xl overflow-hidden aspect-[3/4] reveal group cursor-pointer" style="background:#1e3a5f;">
+        <div class="ind-overlay absolute inset-0"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
+          <svg width="40" height="40" fill="none" viewBox="0 0 40 40" class="mb-3 opacity-80"><path d="M8 32V12l12-4 12 4v20" stroke="#fff" stroke-width="2"/><rect x="16" y="20" width="8" height="12" stroke="#fff" stroke-width="2"/></svg>
+          <h3 class="font-heading font-semibold text-center text-sm lg:text-base">Industrial Equipment</h3>
+          <span class="ind-explore text-accent text-xs font-semibold mt-2">Explore →</span>
+        </div>
+      </div>
+      <div class="ind-card relative rounded-xl overflow-hidden aspect-[3/4] reveal group cursor-pointer" style="background:#2d1b3d;transition-delay:80ms">
+        <div class="ind-overlay absolute inset-0"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
+          <svg width="40" height="40" fill="none" viewBox="0 0 40 40" class="mb-3 opacity-80"><path d="M6 28h28M10 28v-8l4-4h12l4 4v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="28" r="3" stroke="#fff" stroke-width="2"/><circle cx="26" cy="28" r="3" stroke="#fff" stroke-width="2"/></svg>
+          <h3 class="font-heading font-semibold text-center text-sm lg:text-base">Automotive Components</h3>
+          <span class="ind-explore text-accent text-xs font-semibold mt-2">Explore →</span>
+        </div>
+      </div>
+      <div class="ind-card relative rounded-xl overflow-hidden aspect-[3/4] reveal group cursor-pointer" style="background:#1a3340;transition-delay:160ms">
+        <div class="ind-overlay absolute inset-0"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
+          <svg width="40" height="40" fill="none" viewBox="0 0 40 40" class="mb-3 opacity-80"><rect x="10" y="8" width="20" height="24" rx="2" stroke="#fff" stroke-width="2"/><path d="M16 28h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          <h3 class="font-heading font-semibold text-center text-sm lg:text-base">Electronics &amp; Housings</h3>
+          <span class="ind-explore text-accent text-xs font-semibold mt-2">Explore →</span>
+        </div>
+      </div>
+      <div class="ind-card relative rounded-xl overflow-hidden aspect-[3/4] reveal group cursor-pointer" style="background:#1b3d2f;transition-delay:240ms">
+        <div class="ind-overlay absolute inset-0"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
+          <svg width="40" height="40" fill="none" viewBox="0 0 40 40" class="mb-3 opacity-80"><path d="M20 6v6m0 16v6M8 20h6m12 0h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="8" stroke="#fff" stroke-width="2"/></svg>
+          <h3 class="font-heading font-semibold text-center text-sm lg:text-base">Medical / Healthcare</h3>
+          <span class="ind-explore text-accent text-xs font-semibold mt-2">Explore →</span>
+        </div>
+      </div>
+      <div class="ind-card relative rounded-xl overflow-hidden aspect-[3/4] reveal group cursor-pointer" style="background:#3d2d1b;transition-delay:320ms">
+        <div class="ind-overlay absolute inset-0"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
+          <svg width="40" height="40" fill="none" viewBox="0 0 40 40" class="mb-3 opacity-80"><circle cx="20" cy="14" r="6" stroke="#fff" stroke-width="2"/><path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#fff" stroke-width="2"/></svg>
+          <h3 class="font-heading font-semibold text-center text-sm lg:text-base">Sporting Goods &amp; Grips</h3>
+          <span class="ind-explore text-accent text-xs font-semibold mt-2">Explore →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 6. WHY SUNG I ========== -->
+<section id="why" class="bg-primary py-12 lg:py-20">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+      <div class="lg:w-2/5 reveal">
+        <h2 class="font-heading font-bold text-white mb-4" style="font-size:clamp(1.75rem,3.5vw,2.5rem);">Why Sung I?</h2>
+        <p class="text-slate-400 leading-relaxed">Since 1978, we have built our reputation on precision, reliability, and a commitment to complete customer satisfaction. From concept to delivery, every step is managed under one roof.</p>
+      </div>
+      <div class="lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="reveal">
-          <p class="mb-5 font-heading text-sm font-semibold uppercase tracking-[0.34em] text-accent">Since 1978 · Precision Plastics</p>
-          <h1 class="max-w-2xl text-4xl font-semibold leading-[1.05] text-white md:text-5xl xl:text-[3.5rem]">Your Trusted Partner in Plastic Injection Molding</h1>
-          <p class="mt-6 max-w-xl text-lg leading-8 text-muted-dark md:text-xl">45+ years of precision engineering, vertically integrated production, and global delivery confidence for OEM and ODM programs.</p>
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a href="#rfq" class="focus-ring inline-flex min-h-11 items-center justify-center rounded-full bg-accent px-7 py-3 text-base font-semibold text-primary shadow-halo transition duration-200 hover:scale-[1.02] hover:bg-accent-hover">Request a Quote</a>
-            <a href="#capabilities" class="focus-ring inline-flex min-h-11 items-center justify-center rounded-full border border-white/30 px-7 py-3 text-base font-semibold text-white transition duration-200 hover:border-white hover:bg-white/5">Our Capabilities</a>
-          </div>
-          <div class="mt-10 grid gap-4 sm:grid-cols-3">
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-              <p class="font-heading text-2xl font-semibold text-accent">±0.02mm</p>
-              <p class="mt-1 text-sm text-muted-dark">Tolerance-ready precision for demanding components.</p>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-              <p class="font-heading text-2xl font-semibold text-accent">24 hrs</p>
-              <p class="mt-1 text-sm text-muted-dark">Fast RFQ turnaround for urgent sourcing cycles.</p>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-              <p class="font-heading text-2xl font-semibold text-accent">JP / EU / US</p>
-              <p class="mt-1 text-sm text-muted-dark">Export-ready execution with global buyer expectations.</p>
-            </div>
-          </div>
+          <div class="mb-3"><svg width="32" height="32" fill="none" viewBox="0 0 32 32"><path d="M16 4v24M4 16h24" stroke="#C8A84E" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3 class="font-heading font-semibold text-white text-sm mb-1">45+ Years Experience</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Decades of accumulated precision manufacturing expertise.</p>
         </div>
-
-        <div class="reveal lg:[--reveal-delay:120ms]">
-          <div class="placeholder-pattern relative overflow-hidden rounded-[2rem] border border-white/10 p-4 shadow-halo">
-            <div class="absolute inset-0 bg-gradient-to-br from-white/8 to-transparent"></div>
-            <div class="relative rounded-[1.5rem] border border-white/10 bg-primary-light/70 p-4 md:p-6">
-              <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-                <div>
-                  <p class="text-xs uppercase tracking-[0.24em] text-accent">Production Preview</p>
-                  <p class="mt-1 text-sm text-white/75">Facility showcase / process video facade</p>
-                </div>
-                <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/80">Facade</span>
-              </div>
-              <div class="mt-4 grid gap-4 lg:grid-cols-[1.3fr_0.7fr]">
-                <div class="relative min-h-[360px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-slate-600/25 via-white/5 to-accent/10">
-                  <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/10 to-transparent"></div>
-                  <div class="absolute left-6 top-6 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-xs uppercase tracking-[0.24em] text-white/80">Smart Plant Interface</div>
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <button class="focus-ring inline-flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur transition hover:scale-105 hover:bg-white/15" type="button" aria-label="Play factory video preview">
-                      <svg class="ml-1 h-8 w-8 text-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M8.5 7.5v9l8-4.5-8-4.5Z"/>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2 md:bottom-6 md:left-6 md:right-6 md:gap-3">
-                    <div class="min-w-[100px] flex-1 rounded-xl border border-white/10 bg-primary/75 px-3 py-2 backdrop-blur md:rounded-2xl md:px-4 md:py-3">
-                      <p class="text-[10px] uppercase tracking-[0.18em] text-muted-dark md:text-xs">Mold Tooling</p>
-                      <p class="mt-0.5 font-heading text-sm text-white md:mt-1 md:text-lg">CNC + QA</p>
-                    </div>
-                    <div class="min-w-[100px] flex-1 rounded-xl border border-white/10 bg-primary/75 px-3 py-2 backdrop-blur md:rounded-2xl md:px-4 md:py-3">
-                      <p class="text-[10px] uppercase tracking-[0.18em] text-muted-dark md:text-xs">Mass Production</p>
-                      <p class="mt-0.5 font-heading text-sm text-white md:mt-1 md:text-lg">Stable Output</p>
-                    </div>
-                    <div class="min-w-[100px] flex-1 rounded-xl border border-white/10 bg-primary/75 px-3 py-2 backdrop-blur md:rounded-2xl md:px-4 md:py-3">
-                      <p class="text-[10px] uppercase tracking-[0.18em] text-muted-dark md:text-xs">Inspection</p>
-                      <p class="mt-0.5 font-heading text-sm text-white md:mt-1 md:text-lg">Traceable Records</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="grid gap-4">
-                  <div class="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-                    <p class="text-xs uppercase tracking-[0.22em] text-accent">Buyer Confidence</p>
-                    <p class="mt-3 font-heading text-3xl font-semibold text-white">Tiered Manufacturing Support</p>
-                    <p class="mt-3 text-sm leading-6 text-muted-dark">Engineering review, tooling readiness, pilot validation, production scaling, and export delivery in one integrated path.</p>
-                  </div>
-                  <div class="rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-accent/20 to-white/5 p-5">
-                    <p class="text-xs uppercase tracking-[0.22em] text-primary/80">Program Snapshot</p>
-                    <div class="mt-4 space-y-3">
-                      <div class="flex items-center justify-between text-sm text-white">
-                        <span>Tooling completion</span>
-                        <span class="font-semibold text-accent">92%</span>
-                      </div>
-                      <div class="h-2 rounded-full bg-white/10">
-                        <div class="h-2 w-[92%] rounded-full bg-accent"></div>
-                      </div>
-                      <div class="flex items-center justify-between text-sm text-white">
-                        <span>Quality approval rate</span>
-                        <span class="font-semibold text-accent">99.4%</span>
-                      </div>
-                      <div class="h-2 rounded-full bg-white/10">
-                        <div class="h-2 w-[99.4%] rounded-full bg-accent"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="reveal" style="transition-delay:80ms">
+          <div class="mb-3"><svg width="32" height="32" fill="none" viewBox="0 0 32 32"><path d="M16 4l3 6 6.5 1-4.7 4.6 1.1 6.5L16 19l-5.9 3.1 1.1-6.5L6.5 11l6.5-1z" stroke="#C8A84E" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3 class="font-heading font-semibold text-white text-sm mb-1">ISO 9001:2015</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Certified quality management system ensuring consistent excellence.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="bg-accent text-primary">
-      <div class="mx-auto max-w-7xl px-6 py-10 md:px-8">
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="reveal border-primary/10 rounded-2xl border bg-white/15 p-5 backdrop-blur">
-            <p class="font-heading text-4xl font-bold md:text-[2.5rem]"><span class="stat-number" data-target="45" data-suffix="+">0</span></p>
-            <p class="mt-2 text-lg">Years of Experience</p>
-          </div>
-          <div class="reveal border-primary/10 rounded-2xl border bg-white/15 p-5 backdrop-blur lg:[--reveal-delay:80ms]">
-            <p class="font-heading text-4xl font-bold md:text-[2.5rem]"><span class="stat-number" data-target="500" data-suffix="+">0</span></p>
-            <p class="mt-2 text-lg">Global Clients</p>
-          </div>
-          <div class="reveal border-primary/10 rounded-2xl border bg-white/15 p-5 backdrop-blur lg:[--reveal-delay:160ms]">
-            <p class="font-heading text-4xl font-bold md:text-[2.5rem]"><span class="stat-number" data-target="1000" data-suffix="+">0</span></p>
-            <p class="mt-2 text-lg">Molds Delivered</p>
-          </div>
-          <div class="reveal border-primary/10 rounded-2xl border bg-white/15 p-5 backdrop-blur lg:[--reveal-delay:240ms]">
-            <p class="font-heading text-4xl font-bold md:text-[2.5rem]"><span class="stat-number" data-target="99.8" data-decimals="1" data-suffix="%">0</span></p>
-            <p class="mt-2 text-lg">Client Satisfaction</p>
-          </div>
+        <div class="reveal" style="transition-delay:160ms">
+          <div class="mb-3"><svg width="32" height="32" fill="none" viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="16" rx="3" stroke="#C8A84E" stroke-width="2"/><path d="M12 14h8M12 18h5" stroke="#C8A84E" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3 class="font-heading font-semibold text-white text-sm mb-1">OEM / ODM Capability</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Custom manufacturing and design services tailored to your needs.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="capabilities" class="bg-white py-12 md:py-20">
-      <div class="mx-auto max-w-7xl px-6 md:px-8">
-        <div class="mx-auto max-w-3xl text-center reveal">
-          <p class="font-heading text-sm font-semibold uppercase tracking-[0.28em] text-accent">Capabilities</p>
-          <h2 class="mt-4 text-3xl font-semibold text-ink md:text-5xl">Core Capabilities</h2>
-          <p class="mt-4 text-lg leading-8 text-muted">Seven specialized manufacturing processes to meet your exact requirements.</p>
+        <div class="reveal" style="transition-delay:240ms">
+          <div class="mb-3"><svg width="32" height="32" fill="none" viewBox="0 0 32 32"><path d="M6 26V6h20v20H6z" stroke="#C8A84E" stroke-width="2"/><path d="M6 14h20M16 6v20" stroke="#C8A84E" stroke-width="1.5"/></svg></div>
+          <h3 class="font-heading font-semibold text-white text-sm mb-1">Vertical Integration</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Mold design to assembly — every step controlled in-house.</p>
         </div>
-        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <article class="reveal group rounded-[1.75rem] border border-border bg-white p-6 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-2xl">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 14.5 12 5l7 9.5M7 19h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="mt-6 text-2xl font-semibold text-ink">Precision Plastic Injection Molding</h3>
-            <p class="mt-3 text-lg leading-8 text-muted">High-precision parts from 0.1g to 3,000g with ±0.02mm tolerance.</p>
-            <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent transition group-hover:text-accent-hover">Learn More <span aria-hidden="true" class="ml-2">→</span></a>
-          </article>
-          <article class="reveal group rounded-[1.75rem] border border-border bg-white p-6 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-2xl md:[--reveal-delay:80ms]">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v4m0 8v4M4 12h4m8 0h4M7 7l2.5 2.5M14.5 14.5 17 17M17 7l-2.5 2.5M9.5 14.5 7 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="mt-6 text-2xl font-semibold text-ink">Mold Design &amp; Tooling Development</h3>
-            <p class="mt-3 text-lg leading-8 text-muted">In-house mold design, CNC machining, and rapid prototyping.</p>
-            <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent transition group-hover:text-accent-hover">Learn More <span aria-hidden="true" class="ml-2">→</span></a>
-          </article>
-          <article class="reveal group rounded-[1.75rem] border border-border bg-white p-6 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-2xl xl:[--reveal-delay:160ms]">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 6h8v12H8zM5 9h3m8 0h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="mt-6 text-2xl font-semibold text-ink">Insert Molding</h3>
-            <p class="mt-3 text-lg leading-8 text-muted">Metal-plastic integration for enhanced structural strength.</p>
-            <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent transition group-hover:text-accent-hover">Learn More <span aria-hidden="true" class="ml-2">→</span></a>
-          </article>
-          <article class="reveal group rounded-[1.75rem] border border-border bg-white p-6 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-2xl xl:[--reveal-delay:240ms]">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 14c1.5-4 4-6 8-6s6.5 2 8 6M6 18h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="mt-6 text-2xl font-semibold text-ink">Overmolding</h3>
-            <p class="mt-3 text-lg leading-8 text-muted">Multi-material bonding for ergonomic grips and seals.</p>
-            <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent transition group-hover:text-accent-hover">Learn More <span aria-hidden="true" class="ml-2">→</span></a>
-          </article>
-          <article class="reveal group rounded-[1.75rem] border border-border bg-white p-6 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-2xl xl:[--reveal-delay:60ms]">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 7h12v10H6zM9 11h6M9 15h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="mt-6 text-2xl font-semibold text-ink">Secondary Processing &amp; Assembly</h3>
-            <p class="mt-3 text-lg leading-8 text-muted">Pad printing, ultrasonic welding, and full assembly services.</p>
-            <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent transition group-hover:text-accent-hover">Learn More <span aria-hidden="true" class="ml-2">→</span></a>
-          </article>
-          <article class="reveal group rounded-[1.75rem] border border-border bg-white p-6 shadow-panel transition duration-200 hover:-translate-y-1 hover:shadow-2xl xl:[--reveal-delay:140ms]">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v16M6 8h12M6 16h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="mt-6 text-2xl font-semibold text-ink">Material Selection Support</h3>
-            <p class="mt-3 text-lg leading-8 text-muted">Expert guidance on 50+ engineering plastics and compounds.</p>
-            <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent transition group-hover:text-accent-hover">Learn More <span aria-hidden="true" class="ml-2">→</span></a>
-          </article>
-          <article class="reveal group rounded-[1.75rem] border border-border bg-gradient-to-br from-primary to-primary-light p-6 text-white shadow-halo transition duration-200 hover:-translate-y-1 hover:shadow-2xl xl:[--reveal-delay:220ms]">
-            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/20 text-accent">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h7v8H4zM13 6h7v12h-7z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="mt-6 text-2xl font-semibold">Plastic-Metal Integrated Manufacturing</h3>
-            <p class="mt-3 text-lg leading-8 text-white/75">Complete metal stamping to plastic molding workflow.</p>
-            <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent transition hover:text-accent-hover">Learn More <span aria-hidden="true" class="ml-2">→</span></a>
-          </article>
+        <div class="reveal" style="transition-delay:320ms">
+          <div class="mb-3"><svg width="32" height="32" fill="none" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" stroke="#C8A84E" stroke-width="2"/><path d="M10 16h12M16 10v12" stroke="#C8A84E" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3 class="font-heading font-semibold text-white text-sm mb-1">Global Export</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Serving clients in Japan, Europe, and the United States.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="industries" class="bg-surface py-12 md:py-20">
-      <div class="mx-auto max-w-7xl px-6 md:px-8">
-        <div class="mx-auto max-w-3xl text-center reveal">
-          <p class="font-heading text-sm font-semibold uppercase tracking-[0.28em] text-accent">Markets</p>
-          <h2 class="mt-4 text-3xl font-semibold text-ink md:text-5xl">Industries We Serve</h2>
-          <p class="mt-4 text-lg leading-8 text-muted">Application-specific manufacturing support for regulated, performance-driven, and export-oriented sectors.</p>
-        </div>
-        <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-          <a href="#rfq" class="industry-card reveal group relative min-h-[320px] overflow-hidden rounded-[1.75rem] bg-case-panel focus-ring shadow-panel">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(200,168,78,0.35),transparent_24%),linear-gradient(135deg,#243448,#0F1B2D)]"></div>
-            <div class="industry-overlay absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/60 transition duration-300"></div>
-            <div class="relative flex h-full flex-col justify-end p-6 text-white">
-              <p class="font-heading text-2xl font-semibold">Industrial Equipment</p>
-              <p class="industry-extra mt-3 translate-y-2 text-sm font-semibold text-accent opacity-0 transition duration-300">Explore →</p>
-            </div>
-          </a>
-          <a href="#rfq" class="industry-card reveal group relative min-h-[320px] overflow-hidden rounded-[1.75rem] bg-case-panel focus-ring shadow-panel lg:[--reveal-delay:60ms]">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(200,168,78,0.35),transparent_22%),linear-gradient(135deg,#2A3646,#111D30)]"></div>
-            <div class="industry-overlay absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/60 transition duration-300"></div>
-            <div class="relative flex h-full flex-col justify-end p-6 text-white">
-              <p class="font-heading text-2xl font-semibold">Automotive Components</p>
-              <p class="industry-extra mt-3 translate-y-2 text-sm font-semibold text-accent opacity-0 transition duration-300">Explore →</p>
-            </div>
-          </a>
-          <a href="#rfq" class="industry-card reveal group relative min-h-[320px] overflow-hidden rounded-[1.75rem] bg-case-panel focus-ring shadow-panel lg:[--reveal-delay:120ms]">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(200,168,78,0.3),transparent_22%),linear-gradient(135deg,#203041,#0F1B2D)]"></div>
-            <div class="industry-overlay absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/60 transition duration-300"></div>
-            <div class="relative flex h-full flex-col justify-end p-6 text-white">
-              <p class="font-heading text-2xl font-semibold">Electronics &amp; Housings</p>
-              <p class="industry-extra mt-3 translate-y-2 text-sm font-semibold text-accent opacity-0 transition duration-300">Explore →</p>
-            </div>
-          </a>
-          <a href="#rfq" class="industry-card reveal group relative min-h-[320px] overflow-hidden rounded-[1.75rem] bg-case-panel focus-ring shadow-panel lg:[--reveal-delay:180ms]">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(200,168,78,0.28),transparent_24%),linear-gradient(135deg,#223346,#101B2C)]"></div>
-            <div class="industry-overlay absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/60 transition duration-300"></div>
-            <div class="relative flex h-full flex-col justify-end p-6 text-white">
-              <p class="font-heading text-2xl font-semibold">Medical / Healthcare</p>
-              <p class="industry-extra mt-3 translate-y-2 text-sm font-semibold text-accent opacity-0 transition duration-300">Explore →</p>
-            </div>
-          </a>
-          <a href="#rfq" class="industry-card reveal group relative min-h-[320px] overflow-hidden rounded-[1.75rem] bg-case-panel focus-ring shadow-panel lg:[--reveal-delay:240ms]">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_40%_15%,rgba(200,168,78,0.32),transparent_22%),linear-gradient(135deg,#243446,#111D2F)]"></div>
-            <div class="industry-overlay absolute inset-0 bg-gradient-to-t from-primary/80 to-primary/60 transition duration-300"></div>
-            <div class="relative flex h-full flex-col justify-end p-6 text-white">
-              <p class="font-heading text-2xl font-semibold">Sporting Goods &amp; Grips</p>
-              <p class="industry-extra mt-3 translate-y-2 text-sm font-semibold text-accent opacity-0 transition duration-300">Explore →</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="why-sung-i" class="bg-primary py-12 text-white md:py-20">
-      <div class="mx-auto grid max-w-7xl gap-10 px-6 md:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-        <div class="reveal">
-          <p class="font-heading text-sm font-semibold uppercase tracking-[0.28em] text-accent">Why Sung I</p>
-          <h2 class="mt-4 text-3xl font-semibold md:text-5xl">A manufacturing partner built for trust, speed, and execution depth.</h2>
-          <p class="mt-6 text-lg leading-8 text-muted-dark">SUNG I combines decades of tooling know-how with scalable production infrastructure, structured quality systems, and export-ready communication for international buyers.</p>
-          <div class="mt-8 space-y-4">
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p class="font-heading text-lg font-semibold text-white">Designed for B2B sourcing confidence</p>
-              <p class="mt-2 text-base leading-7 text-muted-dark">From feasibility review to shipment readiness, each stage is framed around buyer visibility and risk reduction.</p>
-            </div>
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p class="font-heading text-lg font-semibold text-white">Execution that scales with your product lifecycle</p>
-              <p class="mt-2 text-base leading-7 text-muted-dark">Prototype support, trial runs, full-volume production, and secondary finishing live within one coordinated manufacturing system.</p>
-            </div>
-          </div>
-        </div>
-
-        <div id="quality" class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/5 p-5 lg:[--reveal-delay:80ms]">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M7 10l5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold">45+ Years Experience</h3>
-            <p class="mt-2 text-base leading-7 text-muted-dark">Long-cycle expertise across tooling, molding, assembly, and export coordination.</p>
-          </article>
-          <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/5 p-5 lg:[--reveal-delay:140ms]">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 12.5 10.5 15 16 9.5M12 3l7 4v5c0 4.5-2.8 7.9-7 9-4.2-1.1-7-4.5-7-9V7l7-4Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold">ISO 9001:2015 Certified</h3>
-            <p class="mt-2 text-base leading-7 text-muted-dark">Documented quality management for repeatable process control and traceability.</p>
-          </article>
-          <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/5 p-5 lg:[--reveal-delay:200ms]">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 8h10M7 12h7M7 16h10M5 6h14v12H5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold">OEM / ODM Capability</h3>
-            <p class="mt-2 text-base leading-7 text-muted-dark">Flexible support from customer drawings to collaborative product realization.</p>
-          </article>
-          <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/5 p-5 lg:[--reveal-delay:260ms]">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold">Vertical Integration</h3>
-            <p class="mt-2 text-base leading-7 text-muted-dark">Tooling, molding, secondary processing, and assembly aligned under one roof.</p>
-          </article>
-          <article class="reveal rounded-[1.5rem] border border-white/10 bg-white/5 p-5 lg:[--reveal-delay:320ms]">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18M12 3c3.5 2.5 5 5.5 5 9s-1.5 6.5-5 9c-3.5-2.5-5-5.5-5-9s1.5-6.5 5-9Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold">Global Export (JP / EU / US)</h3>
-            <p class="mt-2 text-base leading-7 text-muted-dark">Manufacturing communication and delivery expectations calibrated for international accounts.</p>
-          </article>
-          <article class="reveal rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-accent/20 to-white/5 p-5 lg:[--reveal-delay:380ms]">
-            <div class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-accent/15 text-accent">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 7h14v10H5zM9 11h6M12 7v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="mt-5 text-xl font-semibold">One-Stop Manufacturing</h3>
-            <p class="mt-2 text-base leading-7 text-muted-dark">A streamlined path from feasibility review to finished component delivery.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="workflow" class="bg-white py-12 md:py-20">
-      <div class="mx-auto max-w-7xl px-6 md:px-8">
-        <div class="mx-auto max-w-3xl text-center reveal">
-          <p class="font-heading text-sm font-semibold uppercase tracking-[0.28em] text-accent">Manufacturing Workflow</p>
-          <h2 class="mt-4 text-3xl font-semibold text-ink md:text-5xl">Structured execution from drawing review to final inspection.</h2>
-          <p class="mt-4 text-lg leading-8 text-muted">A clear production path reduces uncertainty, shortens communication loops, and keeps programs aligned from launch through delivery.</p>
-        </div>
-
-        <div class="mt-14 hidden lg:block">
-          <div class="grid grid-cols-6 gap-4">
-            <div class="timeline-step reveal relative text-center" data-step-index="0">
-              <div class="timeline-node mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent text-xl font-semibold text-white transition duration-300">1</div>
-              <h3 class="mt-5 text-xl font-semibold text-ink">Drawing Review</h3>
-              <p class="mt-2 text-base leading-7 text-muted">Feasibility, tolerances, and manufacturing risk assessment.</p>
-              <div class="timeline-line absolute left-[58%] top-8 h-[2px] w-[88%] border-t-2 border-dashed border-accent/35"></div>
-            </div>
-            <div class="timeline-step reveal relative text-center lg:[--reveal-delay:70ms]" data-step-index="1">
-              <div class="timeline-node mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent text-xl font-semibold text-white transition duration-300">2</div>
-              <h3 class="mt-5 text-xl font-semibold text-ink">Mold Design</h3>
-              <p class="mt-2 text-base leading-7 text-muted">DFM logic, cavity planning, and mold architecture refinement.</p>
-              <div class="timeline-line absolute left-[58%] top-8 h-[2px] w-[88%] border-t-2 border-dashed border-accent/35"></div>
-            </div>
-            <div class="timeline-step reveal relative text-center lg:[--reveal-delay:140ms]" data-step-index="2">
-              <div class="timeline-node mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent text-xl font-semibold text-white transition duration-300">3</div>
-              <h3 class="mt-5 text-xl font-semibold text-ink">Mold Manufacturing</h3>
-              <p class="mt-2 text-base leading-7 text-muted">In-house tooling, machining precision, and readiness checks.</p>
-              <div class="timeline-line absolute left-[58%] top-8 h-[2px] w-[88%] border-t-2 border-dashed border-accent/35"></div>
-            </div>
-            <div class="timeline-step reveal relative text-center lg:[--reveal-delay:210ms]" data-step-index="3">
-              <div class="timeline-node mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent text-xl font-semibold text-white transition duration-300">4</div>
-              <h3 class="mt-5 text-xl font-semibold text-ink">Trial Molding</h3>
-              <p class="mt-2 text-base leading-7 text-muted">Pilot sampling, tuning, validation, and early issue correction.</p>
-              <div class="timeline-line absolute left-[58%] top-8 h-[2px] w-[88%] border-t-2 border-dashed border-accent/35"></div>
-            </div>
-            <div class="timeline-step reveal relative text-center lg:[--reveal-delay:280ms]" data-step-index="4">
-              <div class="timeline-node mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent text-xl font-semibold text-white transition duration-300">5</div>
-              <h3 class="mt-5 text-xl font-semibold text-ink">Mass Production</h3>
-              <p class="mt-2 text-base leading-7 text-muted">Stable output planning with scalable capacity and controlled consistency.</p>
-              <div class="timeline-line absolute left-[58%] top-8 h-[2px] w-[88%] border-t-2 border-dashed border-accent/35"></div>
-            </div>
-            <div class="timeline-step reveal relative text-center lg:[--reveal-delay:350ms]" data-step-index="5">
-              <div class="timeline-node mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent text-xl font-semibold text-white transition duration-300">6</div>
-              <h3 class="mt-5 text-xl font-semibold text-ink">Quality Inspection</h3>
-              <p class="mt-2 text-base leading-7 text-muted">Final checks, records, and shipment confidence before release.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-12 space-y-6 lg:hidden">
-          <div class="timeline-step reveal relative flex gap-4 rounded-[1.5rem] border border-border bg-white p-5 shadow-panel" data-step-index="0">
-            <div class="relative flex flex-col items-center">
-              <div class="timeline-node flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-semibold text-white">1</div>
-              <div class="timeline-line-mobile absolute top-14 h-[calc(100%+1.25rem)] w-[2px] border-l-2 border-dashed border-accent/35"></div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-ink">Drawing Review</h3>
-              <p class="mt-2 text-base leading-7 text-muted">Feasibility, tolerances, and manufacturing risk assessment.</p>
-            </div>
-          </div>
-          <div class="timeline-step reveal relative flex gap-4 rounded-[1.5rem] border border-border bg-white p-5 shadow-panel" data-step-index="1">
-            <div class="relative flex flex-col items-center">
-              <div class="timeline-node flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-semibold text-white">2</div>
-              <div class="timeline-line-mobile absolute top-14 h-[calc(100%+1.25rem)] w-[2px] border-l-2 border-dashed border-accent/35"></div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-ink">Mold Design</h3>
-              <p class="mt-2 text-base leading-7 text-muted">DFM logic, cavity planning, and mold architecture refinement.</p>
-            </div>
-          </div>
-          <div class="timeline-step reveal relative flex gap-4 rounded-[1.5rem] border border-border bg-white p-5 shadow-panel" data-step-index="2">
-            <div class="relative flex flex-col items-center">
-              <div class="timeline-node flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-semibold text-white">3</div>
-              <div class="timeline-line-mobile absolute top-14 h-[calc(100%+1.25rem)] w-[2px] border-l-2 border-dashed border-accent/35"></div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-ink">Mold Manufacturing</h3>
-              <p class="mt-2 text-base leading-7 text-muted">In-house tooling, machining precision, and readiness checks.</p>
-            </div>
-          </div>
-          <div class="timeline-step reveal relative flex gap-4 rounded-[1.5rem] border border-border bg-white p-5 shadow-panel" data-step-index="3">
-            <div class="relative flex flex-col items-center">
-              <div class="timeline-node flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-semibold text-white">4</div>
-              <div class="timeline-line-mobile absolute top-14 h-[calc(100%+1.25rem)] w-[2px] border-l-2 border-dashed border-accent/35"></div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-ink">Trial Molding</h3>
-              <p class="mt-2 text-base leading-7 text-muted">Pilot sampling, tuning, validation, and early issue correction.</p>
-            </div>
-          </div>
-          <div class="timeline-step reveal relative flex gap-4 rounded-[1.5rem] border border-border bg-white p-5 shadow-panel" data-step-index="4">
-            <div class="relative flex flex-col items-center">
-              <div class="timeline-node flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-semibold text-white">5</div>
-              <div class="timeline-line-mobile absolute top-14 h-[calc(100%+1.25rem)] w-[2px] border-l-2 border-dashed border-accent/35"></div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-ink">Mass Production</h3>
-              <p class="mt-2 text-base leading-7 text-muted">Stable output planning with scalable capacity and controlled consistency.</p>
-            </div>
-          </div>
-          <div class="timeline-step reveal relative flex gap-4 rounded-[1.5rem] border border-border bg-white p-5 shadow-panel" data-step-index="5">
-            <div class="relative flex flex-col items-center">
-              <div class="timeline-node flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-semibold text-white">6</div>
-            </div>
-            <div>
-              <h3 class="text-xl font-semibold text-ink">Quality Inspection</h3>
-              <p class="mt-2 text-base leading-7 text-muted">Final checks, records, and shipment confidence before release.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cases" class="bg-surface py-12 md:py-20">
-      <div class="mx-auto max-w-7xl px-6 md:px-8">
-        <div class="mx-auto max-w-3xl text-center reveal">
-          <p class="font-heading text-sm font-semibold uppercase tracking-[0.28em] text-accent">Featured Cases</p>
-          <h2 class="mt-4 text-3xl font-semibold text-ink md:text-5xl">Manufacturing outcomes buyers can evaluate quickly.</h2>
-          <p class="mt-4 text-lg leading-8 text-muted">Case highlights that show precision, controlled environments, and material integration across demanding product categories.</p>
-        </div>
-        <div class="mt-12 grid gap-6 lg:grid-cols-3">
-          <article class="reveal overflow-hidden rounded-[1.75rem] border border-border bg-white shadow-panel">
-            <div class="h-56 bg-[radial-gradient(circle_at_top_left,rgba(200,168,78,0.28),transparent_22%),linear-gradient(145deg,#223246,#0F1B2D)]"></div>
-            <div class="p-6">
-              <span class="inline-flex rounded-full bg-accent/15 px-3 py-1 text-sm font-semibold text-accent">Automotive</span>
-              <h3 class="mt-4 text-2xl font-semibold text-ink">Precision Dashboard Components</h3>
-              <p class="mt-3 text-lg leading-8 text-muted">Multi-cavity mold with ±0.05mm tolerance for tier-1 supplier.</p>
-              <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent">Read More <span aria-hidden="true" class="ml-2">→</span></a>
-            </div>
-          </article>
-          <article class="reveal overflow-hidden rounded-[1.75rem] border border-border bg-white shadow-panel lg:[--reveal-delay:100ms]">
-            <div class="h-56 bg-[radial-gradient(circle_at_top_right,rgba(200,168,78,0.26),transparent_22%),linear-gradient(145deg,#223247,#152338)]"></div>
-            <div class="p-6">
-              <span class="inline-flex rounded-full bg-accent/15 px-3 py-1 text-sm font-semibold text-accent">Medical</span>
-              <h3 class="mt-4 text-2xl font-semibold text-ink">Surgical Device Housing</h3>
-              <p class="mt-3 text-lg leading-8 text-muted">ISO Class 8 cleanroom molding for medical-grade PC enclosures.</p>
-              <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent">Read More <span aria-hidden="true" class="ml-2">→</span></a>
-            </div>
-          </article>
-          <article class="reveal overflow-hidden rounded-[1.75rem] border border-border bg-white shadow-panel lg:[--reveal-delay:200ms]">
-            <div class="h-56 bg-[radial-gradient(circle_at_50%_15%,rgba(200,168,78,0.28),transparent_24%),linear-gradient(145deg,#243447,#111C2E)]"></div>
-            <div class="p-6">
-              <span class="inline-flex rounded-full bg-accent/15 px-3 py-1 text-sm font-semibold text-accent">Electronics</span>
-              <h3 class="mt-4 text-2xl font-semibold text-ink">Smart Home Device Shell</h3>
-              <p class="mt-3 text-lg leading-8 text-muted">Dual-color overmolding with soft-touch TPE for consumer electronics.</p>
-              <a href="#rfq" class="focus-ring mt-6 inline-flex min-h-11 items-center font-semibold text-accent">Read More <span aria-hidden="true" class="ml-2">→</span></a>
-            </div>
-          </article>
-        </div>
-        <div class="mt-10 text-center reveal lg:[--reveal-delay:260ms]">
-          <a href="#rfq" class="focus-ring inline-flex min-h-11 items-center font-semibold text-accent transition hover:text-accent-hover">View All Case Studies <span aria-hidden="true" class="ml-2">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="rfq" class="relative overflow-hidden bg-gold-band py-12 md:py-20">
-      <div class="absolute inset-0">
-        <div class="absolute left-10 top-12 h-28 w-28 rounded-full border border-white/25"></div>
-        <div class="absolute right-12 top-10 h-36 w-36 rounded-[2rem] border border-primary/10 rotate-12"></div>
-        <div class="absolute bottom-8 left-1/4 h-24 w-24 rounded-full bg-white/10 blur-2xl"></div>
-        <div class="absolute bottom-4 right-1/4 h-16 w-40 rounded-full border border-white/20"></div>
-      </div>
-      <div class="relative mx-auto max-w-4xl px-6 text-center md:px-8">
-        <div class="reveal rounded-[2rem] border border-white/20 bg-white/10 px-6 py-10 backdrop-blur md:px-10">
-          <p class="font-heading text-sm font-semibold uppercase tracking-[0.28em] text-primary/75">Request for Quote</p>
-          <h2 class="mt-4 text-3xl font-semibold text-primary md:text-5xl">Ready to Start Your Next Project?</h2>
-          <p class="mx-auto mt-4 max-w-2xl text-lg leading-8 text-primary/80">Upload your 2D/3D drawings and get a quote within 24 hours.</p>
-          <a href="#contact" class="focus-ring mt-8 inline-flex min-h-11 items-center rounded-full bg-primary px-7 py-3 text-base font-semibold text-white shadow-halo transition duration-200 hover:scale-[1.02] hover:bg-primary-light">Request a Quote Now</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="contact" class="bg-primary text-white">
-    <div class="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-16">
-      <div class="grid gap-10 border-b border-slate-700 pb-10 md:grid-cols-2 xl:grid-cols-4">
-        <div id="about" class="reveal">
-          <div class="inline-flex items-center gap-3">
-            <img src="assets/logo.jpg" alt="SUNG I" class="h-10 w-auto rounded md:h-12" />
-          </div>
-          <p class="mt-5 text-lg leading-8 text-muted-dark">Trusted plastic injection molding manufacturing for global OEM and ODM buyers seeking precision, reliability, and integrated production support.</p>
-          <div class="mt-6 flex gap-3">
-            <a href="#contact" class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/85 transition hover:bg-white/10" aria-label="LinkedIn">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5A1.44 1.44 0 1 0 6.94 5.62a1.44 1.44 0 0 0 0 2.88ZM5.7 9.9h2.48V18H5.7V9.9Zm4.03 0h2.38v1.1h.03c.33-.63 1.14-1.3 2.34-1.3 2.5 0 2.96 1.64 2.96 3.78V18h-2.48v-3.97c0-.95-.02-2.16-1.31-2.16-1.31 0-1.51 1.02-1.51 2.08V18H9.73V9.9Z"/></svg>
-            </a>
-            <a href="#contact" class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/85 transition hover:bg-white/10" aria-label="Email">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16v10H4zM4 8l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="#contact" class="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/85 transition hover:bg-white/10" aria-label="Phone">
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 5h3l1 4-2 1.5c1.2 2.2 2.8 3.8 5 5L15.5 13l4 1v3c0 .55-.45 1-1 1-7.18 0-13-5.82-13-13 0-.55.45-1 1-1Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="reveal md:[--reveal-delay:80ms]">
-          <h3 class="text-xl font-semibold">Quick Links</h3>
-          <ul class="mt-5 space-y-3 text-base text-muted-dark">
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#home">Home</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#capabilities">Capabilities</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#industries">Industries</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#why-sung-i">Why Sung I</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#workflow">Workflow</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#cases">Cases</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#quality">Quality</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#about">About</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="reveal md:[--reveal-delay:160ms]">
-          <h3 class="text-xl font-semibold">Services</h3>
-          <ul class="mt-5 space-y-3 text-base text-muted-dark">
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#capabilities">Precision Plastic Injection Molding</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#capabilities">Mold Design &amp; Tooling Development</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#capabilities">Insert Molding</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#capabilities">Overmolding</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#capabilities">Secondary Processing &amp; Assembly</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#capabilities">Material Selection Support</a></li>
-            <li><a class="focus-ring inline-flex min-h-11 items-center hover:text-white" href="#capabilities">Plastic-Metal Integrated Manufacturing</a></li>
-          </ul>
-        </div>
-
-        <div class="reveal md:[--reveal-delay:240ms]">
-          <h3 class="text-xl font-semibold">Contact Info</h3>
-          <div class="mt-5 space-y-5 text-base text-muted-dark">
-            <div>
-              <p class="font-semibold text-white">Address</p>
-              <p class="mt-2 leading-7">No. 88, Industrial Rd., Taichung, Taiwan</p>
-            </div>
-            <div>
-              <p class="font-semibold text-white">Phone</p>
-              <p class="mt-2 leading-7">+886 4 1234 5678</p>
-            </div>
-            <div>
-              <p class="font-semibold text-white">Email</p>
-              <p class="mt-2 leading-7">sales@sung-i.example</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-4 pt-6 text-sm text-muted-dark md:flex-row md:items-center md:justify-between">
-        <p>© 2026 SUNG I Industrial Co., Ltd. All rights reserved.</p>
-        <div class="flex items-center gap-4">
-          <button class="focus-ring min-h-11 rounded-full px-3 font-semibold text-white/80 transition hover:text-white" type="button">EN</button>
-          <button class="focus-ring min-h-11 rounded-full px-3 font-semibold text-white/60 transition hover:text-white" type="button">繁中</button>
-          <button class="focus-ring min-h-11 rounded-full px-3 font-semibold text-white/60 transition hover:text-white" type="button">JP</button>
+        <div class="reveal" style="transition-delay:400ms">
+          <div class="mb-3"><svg width="32" height="32" fill="none" viewBox="0 0 32 32"><path d="M4 24l8-8 4 4 12-12" stroke="#C8A84E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 class="font-heading font-semibold text-white text-sm mb-1">One-Stop Manufacturing</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">From raw material to finished, packaged product — all under one roof.</p>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    (() => {
-      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll("a") : [];
+<!-- ========== 7. MANUFACTURING WORKFLOW ========== -->
+<section id="workflow" class="bg-white py-12 lg:py-20">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-heading font-bold text-foreground mb-3" style="font-size:clamp(1.75rem,3.5vw,2.5rem);">Manufacturing Workflow</h2>
+      <p class="text-muted max-w-2xl mx-auto">From drawing to delivery — six precise steps</p>
+    </div>
+    <!-- Desktop horizontal timeline -->
+    <div class="hidden lg:flex items-start justify-between relative" id="timeline">
+      <div class="absolute top-5 left-[8%] right-[8%] h-0.5 border-t-2 border-dashed border-accent/40"></div>
+      <div class="tl-step flex flex-col items-center w-1/6 relative z-10" data-step="1">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm mb-3">1</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm text-center">Drawing Review</h3>
+      </div>
+      <div class="tl-step flex flex-col items-center w-1/6 relative z-10" data-step="2">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm mb-3">2</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm text-center">Mold Design</h3>
+      </div>
+      <div class="tl-step flex flex-col items-center w-1/6 relative z-10" data-step="3">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm mb-3">3</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm text-center">Mold Manufacturing</h3>
+      </div>
+      <div class="tl-step flex flex-col items-center w-1/6 relative z-10" data-step="4">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm mb-3">4</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm text-center">Trial Molding</h3>
+      </div>
+      <div class="tl-step flex flex-col items-center w-1/6 relative z-10" data-step="5">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm mb-3">5</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm text-center">Mass Production</h3>
+      </div>
+      <div class="tl-step flex flex-col items-center w-1/6 relative z-10" data-step="6">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm mb-3">6</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm text-center">Quality Inspection</h3>
+      </div>
+    </div>
+    <!-- Mobile vertical timeline -->
+    <div class="lg:hidden flex flex-col gap-6 relative pl-8">
+      <div class="absolute left-[19px] top-5 bottom-5 w-0.5 border-l-2 border-dashed border-accent/40"></div>
+      <div class="tl-step flex items-start gap-4 relative" data-step="1">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm flex-shrink-0 relative z-10">1</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm pt-2">Drawing Review</h3>
+      </div>
+      <div class="tl-step flex items-start gap-4 relative" data-step="2">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm flex-shrink-0 relative z-10">2</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm pt-2">Mold Design</h3>
+      </div>
+      <div class="tl-step flex items-start gap-4 relative" data-step="3">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm flex-shrink-0 relative z-10">3</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm pt-2">Mold Manufacturing</h3>
+      </div>
+      <div class="tl-step flex items-start gap-4 relative" data-step="4">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm flex-shrink-0 relative z-10">4</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm pt-2">Trial Molding</h3>
+      </div>
+      <div class="tl-step flex items-start gap-4 relative" data-step="5">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm flex-shrink-0 relative z-10">5</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm pt-2">Mass Production</h3>
+      </div>
+      <div class="tl-step flex items-start gap-4 relative" data-step="6">
+        <div class="w-10 h-10 rounded-full bg-accent text-primary flex items-center justify-center font-heading font-bold text-sm flex-shrink-0 relative z-10">6</div>
+        <h3 class="font-heading font-semibold text-foreground text-sm pt-2">Quality Inspection</h3>
+      </div>
+    </div>
+  </div>
+</section>
 
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener("click", () => {
-          const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-          menuToggle.setAttribute("aria-expanded", String(!isExpanded));
-          mobileMenu.classList.toggle("hidden");
-        });
+<!-- ========== 8. FEATURED CASE STUDIES ========== -->
+<section id="cases" class="bg-bg-alt py-12 lg:py-20">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <h2 class="font-heading font-bold text-foreground mb-3" style="font-size:clamp(1.75rem,3.5vw,2.5rem);">Featured Case Studies</h2>
+      <p class="text-muted max-w-2xl mx-auto">Real-world results across industries</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="bg-white rounded-xl overflow-hidden border border-slate-100 reveal">
+        <div class="aspect-[16/10] flex items-center justify-center" style="background:#1e3a5f;"><svg width="48" height="48" fill="none" viewBox="0 0 48 48"><rect x="12" y="16" width="24" height="16" rx="2" stroke="#fff" stroke-width="2" opacity="0.5"/></svg></div>
+        <div class="p-5">
+          <span class="inline-block bg-accent/10 text-accent text-xs font-semibold px-2 py-1 rounded mb-2">Automotive</span>
+          <h3 class="font-heading font-semibold text-foreground mb-2">Dashboard Component Assembly</h3>
+          <p class="text-muted text-sm mb-3">Multi-shot molding solution reducing assembly steps by 40%.</p>
+          <a href="#" class="text-accent text-sm font-semibold hover:underline">Read More →</a>
+        </div>
+      </article>
+      <article class="bg-white rounded-xl overflow-hidden border border-slate-100 reveal" style="transition-delay:80ms">
+        <div class="aspect-[16/10] flex items-center justify-center" style="background:#1b3d2f;"><svg width="48" height="48" fill="none" viewBox="0 0 48 48"><circle cx="24" cy="24" r="10" stroke="#fff" stroke-width="2" opacity="0.5"/></svg></div>
+        <div class="p-5">
+          <span class="inline-block bg-accent/10 text-accent text-xs font-semibold px-2 py-1 rounded mb-2">Medical</span>
+          <h3 class="font-heading font-semibold text-foreground mb-2">Precision Medical Device Housing</h3>
+          <p class="text-muted text-sm mb-3">Clean-room compatible injection molding for surgical instruments.</p>
+          <a href="#" class="text-accent text-sm font-semibold hover:underline">Read More →</a>
+        </div>
+      </article>
+      <article class="bg-white rounded-xl overflow-hidden border border-slate-100 reveal" style="transition-delay:160ms">
+        <div class="aspect-[16/10] flex items-center justify-center" style="background:#3d2d1b;"><svg width="48" height="48" fill="none" viewBox="0 0 48 48"><path d="M16 32l8-16 8 16" stroke="#fff" stroke-width="2" opacity="0.5" stroke-linecap="round"/></svg></div>
+        <div class="p-5">
+          <span class="inline-block bg-accent/10 text-accent text-xs font-semibold px-2 py-1 rounded mb-2">Sporting Goods</span>
+          <h3 class="font-heading font-semibold text-foreground mb-2">Ergonomic Grip Overmolding</h3>
+          <p class="text-muted text-sm mb-3">Two-shot TPE/ABS grip with enhanced durability and comfort.</p>
+          <a href="#" class="text-accent text-sm font-semibold hover:underline">Read More →</a>
+        </div>
+      </article>
+    </div>
+    <div class="text-center mt-10 reveal">
+      <a href="#" class="text-accent font-heading font-semibold hover:underline">View All Case Studies →</a>
+    </div>
+  </div>
+</section>
 
-        mobileLinks.forEach((link) => {
-          link.addEventListener("click", () => {
-            menuToggle.setAttribute("aria-expanded", "false");
-            mobileMenu.classList.add("hidden");
-          });
-        });
+<!-- ========== 9. RFQ CTA ========== -->
+<section id="rfq" class="relative py-16 lg:py-24 overflow-hidden" style="background:linear-gradient(135deg,#C8A84E 0%,#D4B85E 100%);">
+  <div class="absolute inset-0 opacity-[0.06]" style="background-image:url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F1B2D'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");"></div>
+  <div class="max-w-[800px] mx-auto px-6 lg:px-8 text-center relative z-10">
+    <h2 class="font-heading font-bold text-primary mb-4 reveal" style="font-size:clamp(1.75rem,3.5vw,2.5rem);">Ready to Start Your Next Project?</h2>
+    <p class="text-primary/70 text-lg mb-8 reveal" style="transition-delay:80ms">Upload your 2D/3D drawings and get a quote within 24 hours</p>
+    <a href="mailto:Nicole.chang@sungitw.com" class="btn bg-primary text-white px-10 py-5 text-base font-bold rounded-lg hover:bg-primary-light reveal" style="transition-delay:160ms">Request a Quote Now</a>
+  </div>
+</section>
+
+<!-- ========== 10. FOOTER ========== -->
+<footer class="bg-primary pt-12 lg:pt-16 pb-6">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-8 border-b border-slate-700">
+      <!-- Col 1: Brand -->
+      <div>
+        <img src="assets/logo.jpg" alt="SUNG I Logo" class="h-8 w-auto mb-4">
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">Precision plastic injection molding since 1978. Your trusted OEM/ODM manufacturing partner.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-primary transition-colors" aria-label="LinkedIn">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169H6.25c.03.678 0 7.225 0 7.225h2.401z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-accent hover:text-primary transition-colors" aria-label="YouTube">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 011.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 01-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 01-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 010 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 011.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 017.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Col 2: Quick Links -->
+      <div>
+        <h4 class="font-heading font-semibold text-white text-sm mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-slate-400">
+          <li><a href="#hero" class="hover:text-accent transition-colors">Home</a></li>
+          <li><a href="#capabilities" class="hover:text-accent transition-colors">Services</a></li>
+          <li><a href="#industries" class="hover:text-accent transition-colors">Industries</a></li>
+          <li><a href="#why" class="hover:text-accent transition-colors">About / Why Us</a></li>
+          <li><a href="#workflow" class="hover:text-accent transition-colors">Process</a></li>
+          <li><a href="#cases" class="hover:text-accent transition-colors">Case Studies</a></li>
+          <li><a href="#rfq" class="hover:text-accent transition-colors">Contact / RFQ</a></li>
+        </ul>
+      </div>
+      <!-- Col 3: Services -->
+      <div>
+        <h4 class="font-heading font-semibold text-white text-sm mb-4">Services</h4>
+        <ul class="space-y-2 text-sm text-slate-400">
+          <li>Precision Injection Molding</li>
+          <li>Mold Design &amp; Tooling</li>
+          <li>Insert Molding</li>
+          <li>Two-Shot (2K) Molding</li>
+          <li>Overmolding</li>
+          <li>Assembly &amp; Sub-Assembly</li>
+          <li>Material Selection Support</li>
+        </ul>
+      </div>
+      <!-- Col 4: Contact -->
+      <div>
+        <h4 class="font-heading font-semibold text-white text-sm mb-4">Contact</h4>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li class="flex items-start gap-2"><svg width="16" height="16" fill="none" viewBox="0 0 16 16" class="mt-0.5 flex-shrink-0"><path d="M8 1a5 5 0 00-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 00-5-5z" stroke="#64748B" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" stroke="#64748B" stroke-width="1.5"/></svg>Changhua, Taiwan</li>
+          <li class="flex items-start gap-2"><svg width="16" height="16" fill="none" viewBox="0 0 16 16" class="mt-0.5 flex-shrink-0"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="#64748B" stroke-width="1.5"/><path d="M2 5l6 4 6-4" stroke="#64748B" stroke-width="1.5"/></svg><a href="mailto:Nicole.chang@sungitw.com" class="hover:text-accent transition-colors">Nicole.chang@sungitw.com</a></li>
+          <li class="flex items-start gap-2"><svg width="16" height="16" fill="none" viewBox="0 0 16 16" class="mt-0.5 flex-shrink-0"><circle cx="8" cy="8" r="6" stroke="#64748B" stroke-width="1.5"/><path d="M8 4v4l3 2" stroke="#64748B" stroke-width="1.5" stroke-linecap="round"/></svg><a href="https://www.sungitw.com" class="hover:text-accent transition-colors">www.sungitw.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 text-xs text-slate-500">
+      <p>© 2026 SUNG I Enterprise Co., Ltd. All rights reserved.</p>
+      <div class="flex gap-2">
+        <button class="px-2 py-1 rounded text-white font-semibold bg-white/10">EN</button>
+        <button class="px-2 py-1 rounded hover:text-white">中</button>
+        <button class="px-2 py-1 rounded hover:text-white">JP</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+(function(){
+  'use strict';
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // === Mobile Menu ===
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  let menuOpen = false;
+
+  function toggleMenu(open) {
+    menuOpen = typeof open === 'boolean' ? open : !menuOpen;
+    hamburger.classList.toggle('open', menuOpen);
+    hamburger.setAttribute('aria-expanded', menuOpen);
+    mobileMenu.classList.toggle('open', menuOpen);
+    mobileMenu.setAttribute('aria-hidden', !menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  }
+
+  hamburger.addEventListener('click', () => toggleMenu());
+  mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) toggleMenu(false); });
+
+  // === Reveal on Scroll ===
+  if (!prefersReducedMotion) {
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => revealObs.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
+
+  // === Count-Up Animation ===
+  const countEls = document.querySelectorAll('.count-up');
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || '+';
+      const decimal = parseInt(el.dataset.decimal) || 0;
+      const duration = prefersReducedMotion ? 0 : 2000;
+      const start = performance.now();
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = eased * target;
+        el.textContent = (decimal > 0 ? current.toFixed(decimal) : Math.floor(current).toLocaleString()) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
       }
+      if (duration === 0) { el.textContent = (decimal > 0 ? target.toFixed(decimal) : target.toLocaleString()) + suffix; }
+      else requestAnimationFrame(update);
+      countObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  countEls.forEach(el => countObs.observe(el));
 
-      document.querySelectorAll('a[href^="#"]').forEach((link) => {
-        link.addEventListener("click", (event) => {
-          const targetId = link.getAttribute("href");
-          if (!targetId || targetId === "#") return;
-          const target = document.querySelector(targetId);
-          if (!target) return;
-          event.preventDefault();
-          target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
-        });
+  // === Timeline Steps ===
+  const tlSteps = document.querySelectorAll('.tl-step');
+  if (!prefersReducedMotion && tlSteps.length) {
+    let timelineTriggered = false;
+    const tlObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting || timelineTriggered) return;
+        timelineTriggered = true;
+        tlSteps.forEach((s, i) => setTimeout(() => s.classList.add('active'), i * 400));
       });
+    }, { threshold: 0.2 });
+    const timelineSection = document.getElementById('workflow');
+    if (timelineSection) tlObs.observe(timelineSection);
+  } else {
+    tlSteps.forEach(s => s.classList.add('active'));
+  }
 
-      const revealItems = document.querySelectorAll(".reveal");
-      if (prefersReducedMotion) {
-        revealItems.forEach((item) => item.classList.add("is-visible"));
-      } else {
-        const revealObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.15 });
-
-        revealItems.forEach((item) => revealObserver.observe(item));
+  // === Active Nav on Scroll ===
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
       }
+    });
+  }, { threshold: 0.3, rootMargin: '-72px 0px -50% 0px' });
+  sections.forEach(s => navObs.observe(s));
 
-      const statNumbers = document.querySelectorAll(".stat-number");
-      const formatNumber = (value, decimals, suffix) => {
-        const fixed = Number(value).toFixed(decimals);
-        const output = decimals > 0 ? fixed : Number(fixed).toLocaleString("en-US");
-        return `${output}${suffix}`;
-      };
-
-      const animateStat = (el) => {
-        const target = Number(el.dataset.target || 0);
-        const decimals = Number(el.dataset.decimals || 0);
-        const suffix = el.dataset.suffix || "";
-        const duration = 2000;
-        const start = performance.now();
-
-        const step = (time) => {
-          const progress = Math.min((time - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const current = target * eased;
-          el.textContent = formatNumber(current, decimals, suffix);
-          if (progress < 1) {
-            requestAnimationFrame(step);
-          } else {
-            el.textContent = formatNumber(target, decimals, suffix);
-          }
-        };
-
-        requestAnimationFrame(step);
-      };
-
-      if (prefersReducedMotion) {
-        statNumbers.forEach((el) => {
-          el.textContent = formatNumber(Number(el.dataset.target || 0), Number(el.dataset.decimals || 0), el.dataset.suffix || "");
-        });
-      } else {
-        const statObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateStat(entry.target);
-              statObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.6 });
-
-        statNumbers.forEach((el) => statObserver.observe(el));
-      }
-
-      const timelineSteps = Array.from(document.querySelectorAll(".timeline-step"));
-      if (prefersReducedMotion) {
-        timelineSteps.forEach((step) => step.classList.add("is-active"));
-      } else {
-        const timelineObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            const stepIndex = Number(entry.target.dataset.stepIndex || 0);
-            timelineSteps
-              .filter((step) => Number(step.dataset.stepIndex || 0) <= stepIndex)
-              .forEach((step, index) => {
-                window.setTimeout(() => step.classList.add("is-active"), index * 120);
-              });
-          });
-        }, { threshold: 0.45 });
-
-        timelineSteps.forEach((step) => timelineObserver.observe(step));
-      }
-
-      const navSections = ["home", "capabilities", "industries", "why-sung-i", "workflow", "cases", "quality", "about", "contact"]
-        .map((id) => document.getElementById(id))
-        .filter(Boolean);
-      const navLinks = Array.from(document.querySelectorAll(".nav-link"));
-
-      const setActiveNav = (id) => {
-        navLinks.forEach((link) => {
-          const isActive = link.getAttribute("href") === `#${id}`;
-          link.classList.toggle("active", isActive);
-        });
-      };
-
-      if (navSections.length) {
-        const navObserver = new IntersectionObserver((entries) => {
-          const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-          if (visible) setActiveNav(visible.target.id);
-        }, { threshold: 0.45, rootMargin: "-10% 0px -30% 0px" });
-
-        navSections.forEach((section) => navObserver.observe(section));
-      }
-    })();
-  </script>
+})();
+</script>
 </body>
 </html>
