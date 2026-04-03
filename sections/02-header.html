@@ -1,0 +1,52 @@
+<!-- ========== 1. HEADER / NAV ========== -->
+<header class="sticky top-0 z-50 bg-primary h-16 lg:h-[72px] flex items-center" id="site-header">
+  <div class="w-full max-w-[1280px] mx-auto px-6 lg:px-8 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex-shrink-0">
+      <img src="assets/logo.jpg" alt="SUNG I Logo" class="h-8 lg:h-10 w-auto">
+    </a>
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-white/80" aria-label="Main navigation">
+      <a href="#hero" class="nav-link py-2">Home</a>
+      <a href="#capabilities" class="nav-link py-2">Services</a>
+      <a href="#industries" class="nav-link py-2">Industries</a>
+      <a href="#why" class="nav-link py-2">Why Us</a>
+      <a href="#workflow" class="nav-link py-2">Process</a>
+      <a href="#cases" class="nav-link py-2">Cases</a>
+      <a href="#rfq" class="nav-link py-2">Contact</a>
+    </nav>
+    <!-- Right: Lang + CTA -->
+    <div class="hidden lg:flex items-center gap-4">
+      <div class="flex items-center gap-1 text-xs text-white/60">
+        <button class="px-2 py-1 rounded text-white font-semibold bg-white/10 min-w-[32px] min-h-[32px]">EN</button>
+        <button class="px-2 py-1 rounded hover:text-white min-w-[32px] min-h-[32px]">中</button>
+        <button class="px-2 py-1 rounded hover:text-white min-w-[32px] min-h-[32px]">JP</button>
+      </div>
+      <a href="#rfq" class="btn bg-accent text-primary px-5 py-2 text-sm font-bold rounded-lg hover:bg-accent-hover">Request a Quote</a>
+    </div>
+    <!-- Hamburger -->
+    <button class="hamburger lg:hidden flex flex-col gap-[5px] p-3 min-w-[44px] min-h-[44px] items-center justify-center" aria-label="Toggle menu" aria-expanded="false" id="hamburger-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu fixed inset-0 z-40 bg-primary flex flex-col items-center justify-center gap-8 lg:hidden" id="mobile-menu" aria-hidden="true">
+  <nav class="flex flex-col items-center gap-6 text-lg font-heading font-semibold text-white">
+    <a href="#hero" class="mobile-nav-link py-2 min-h-[44px]">Home</a>
+    <a href="#capabilities" class="mobile-nav-link py-2 min-h-[44px]">Services</a>
+    <a href="#industries" class="mobile-nav-link py-2 min-h-[44px]">Industries</a>
+    <a href="#why" class="mobile-nav-link py-2 min-h-[44px]">Why Us</a>
+    <a href="#workflow" class="mobile-nav-link py-2 min-h-[44px]">Process</a>
+    <a href="#cases" class="mobile-nav-link py-2 min-h-[44px]">Cases</a>
+    <a href="#rfq" class="mobile-nav-link py-2 min-h-[44px]">Contact</a>
+  </nav>
+  <a href="#rfq" class="btn bg-accent text-primary px-8 py-3 text-base font-bold rounded-lg">Request a Quote</a>
+  <div class="flex gap-2 text-sm text-white/60 mt-4">
+    <button class="px-3 py-2 rounded text-white font-semibold bg-white/10">EN</button>
+    <button class="px-3 py-2 rounded hover:text-white">中</button>
+    <button class="px-3 py-2 rounded hover:text-white">JP</button>
+  </div>
+</div>
+
